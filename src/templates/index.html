@@ -2,36 +2,40 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ExploResto</title>
 </head>
 <body>
-<header class="header">
-        <h1 class="header__title">ExploResto</h1>
+    <a href="#maincontent" class="skip-link">Menuju ke konten</a>
+    <header class="header">
+        <h1 tabindex="0" class="header__title">Explo<span>Resto</span></h1>
+        <button id="menu" class="header__menu">☰</button>
         <nav id="drawer" class="nav">
             <ul class="nav__list">
-                <li class="nav__item"><a href="#">Home</a></li>
+                <li class="nav__item"><a href="./index.html">Home</a></li>
                 <li class="nav__item"><a href="#">Favorite</a></li>
-                <li class="nav__item"><a href="#">About Us</a></li>
+                <li class="nav__item"><a href="https://github.com/zianatulmuna">About Us</a></li>
             </ul>
-        </nav>
-</header>
-
-<div class="hero">
-    <div class="hero__inner">
-        <h1 class="hero__title">Restaurant Catalog</h1>
-        <p class="hero__tagline">Explore restaurants and discover food tastes</p>
-    </div>
-</div>
-
-<main>
-    <section class="content">
-        <div class="latest">
-            <h1 class="latest__label">Explore restaurants</h1>
-            <div class="posts"></div>
+        </nav>        
+    </header>
+    <div class="hero">
+        <div class="hero__inner">
+            <h1 tabindex="0" class="hero__title">Restaurant Catalog</h1>
+            <p tabindex="0" class="hero__tagline">Explore restaurants and discover food tastes</p>
         </div>
-    </section>
-</main>
-
+    </div>
+    <main id="maincontent">
+        <section class="content">
+            <div class="explore">
+                <h1 tabindex="0" class="explore__label">Explore Restaurants</h1>
+                <div class="posts"></div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>Copyright © 2022 - ExploResto Apps</p>
+    </footer>
 </body>
 </html>
