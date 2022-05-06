@@ -52,7 +52,9 @@
 
 @media screen and (max-width: 650px) {
     .header__title {
-        font-size: 22pt;
+        height: 44px;
+        padding: 7px 0;
+        margin-left: 20px;
     }
 
     .nav a {
@@ -71,7 +73,8 @@
     }
 
     .post-item__title {
-        font-size: 16pt;
+        height: 44px;
+        padding: 10px 0;
     }
 
     .post-item__description {
