@@ -30,22 +30,22 @@ body {
  */
 
 .header {
-    height: 80px;
+    height: 70px;
     padding: 0 30px;
     width: 100%;
     display: flex;
     justify-content: space-between;       
     align-items: center;
     background-color: #fff;
-    position: -webkit-sticky;
+    position: sticky;
     top: 0;
-    z-index: 99;
+    z-index: 1;
     box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
 }
 
 .header__title {
-    height: 44px;
-    padding: 3px 0;
+    height: 40px;
+    padding: 3px;
 }
 
 .header__menu {
@@ -89,7 +89,7 @@ body {
 
 .nav a {
     display: inline-block;
-    font-size: 14pt;
+    font-size: 13pt;
     padding: 15px;
     min-width: 44px;
     min-height: 44px;
@@ -226,11 +226,11 @@ main {
 
 .post-item__rating {
     position: absolute;
-    padding: 7px 10px;
     top: 20px;
     left: 0;
+    padding: 8px 12px;
     display: inline-block;
-    font-size: 11pt;
+    font-size: 10pt;
     color: white;
     background-color:black
 }
@@ -241,7 +241,7 @@ main {
 
 .post-item__city {
     font-size: 10pt;
-    margin-top: 16px;
+    margin-bottom: 10px;
     color: #206A5D;
 }
 
@@ -252,14 +252,14 @@ main {
 
 .post-item__title {
     font-weight: 500;
+    margin-bottom: 10px;
     font-size: 14pt;
-    margin-top: 10px;
     transition: 0.3s opacity;
     color: #81b214;
 }
 
 .post-item__title a {
-    padding: 10px 0;
+    padding: 12px 0;
 }
 
 .post-item__title a:hover {
@@ -272,9 +272,14 @@ main {
 }
 
 .post-item__description {
-    margin-top: 10px;
+
     font-size: 12px;
     line-height: 1.5em;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 5; /* number of lines to show */
+    -webkit-box-orient: vertical;
 }
 
 

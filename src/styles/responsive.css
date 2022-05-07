@@ -3,17 +3,19 @@
     grid-row-gap: 16px;
 }
 
-@media screen and (max-width: 500px) { 
+@media screen and (max-width: 505px) { 
     .nav {
         top: 0;
-        margin-top: 80px;
+        margin: 0;
+        left: 0;
+        margin-top: 70px;
         background-color: #f9f9f9;
         width: 280px;
         position: absolute;
         
         /* drawer off canvas. */
         -webkit-transform: translate(-100px, 0);
-        transform: translate(-400px, 0);
+        transform: translate(-300px, 0);
 
         /* animate the drawer. */
         transition: transform 0.3s ease;
@@ -44,7 +46,7 @@
 }
 
 
-@media screen and (min-width: 500px) {
+@media screen and (min-width: 505px) {
     .header__menu {
         display: none;
     }
@@ -54,7 +56,6 @@
     .header__title {
         height: 44px;
         padding: 7px 0;
-        margin-left: 20px;
     }
 
     .nav a {
@@ -62,27 +63,12 @@
         padding: 10px;
     }
 
-    .explore__label {
+    .content__heading {
         font-size: 20pt;
     }
 }
 
 @media screen and (min-width: 650px) {
-    .post-item__content {
-        padding: 16px 32px 32px 32px;
-    }
-
-    .post-item__title {
-        height: 44px;
-        padding: 10px 0;
-    }
-
-    .post-item__description {
-        font-size: 10pt;
-    }
-}
-
-@media screen and (min-width: 700px) {
     .posts {
         display: grid;
         grid-template-columns: 1fr 1fr;
@@ -91,19 +77,14 @@
     }
 
     .post-item__thumbnail {
-        max-height: 200px;
+        height: 210px;
         object-fit: cover;
     }
 }
 
-@media screen and (min-width: 800px) {
-    .nav__list {
-        max-width: 800px;
-        margin: 0 auto;
-    }
-
+@media screen and (min-width: 745px) {
     .post-item__thumbnail {
-        max-height: 230px;
+        height: 250px;
         object-fit: cover;
     }
 }
@@ -115,21 +96,21 @@
     }
 
     .post-item__thumbnail {
-        max-height: 180px;
+        height: 200px;
         object-fit: cover;
     }
 }
 
 @media screen and (min-width: 1000px) {
     .post-item__thumbnail {
-        max-height: 200px;
+        max-height: 250px;
         object-fit: cover;
     }
 }
 
 @media screen and (min-width: 1100px) {
     .post-item__thumbnail {
-        max-height: 240px;
+        height: 220px;
         object-fit: cover;
     }
 }
