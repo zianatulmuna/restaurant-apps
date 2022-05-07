@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;0,600;1,300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;0,500;0,600;1,300&display=swap');
 
 * {
     padding: 0;
@@ -18,7 +18,7 @@ body {
     margin: 0;
     font-family: 'Plus Jakarta Sans', "Roboto", sans-serif;
     font-size: 14pt;
-    font-weight: 400;
+    font-weight: normal;
     color: #000;
     background-color: #f1f1f1;
 }
@@ -30,22 +30,22 @@ body {
  */
 
 .header {
-    min-width: 44px;
-    min-height: 80px;
+    height: 80px;
+    padding: 0 30px;
+    width: 100%;
     display: flex;
     justify-content: space-between;       
     align-items: center;
     background-color: #fff;
+    position: -webkit-sticky;
+    top: 0;
+    z-index: 99;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
 }
 
 .header__title {
     height: 44px;
     padding: 3px 0;
-    margin-left: 30px;
-}
-
-.header__title span {
-   color: #206A5D;
 }
 
 .header__menu {
@@ -53,7 +53,6 @@ body {
     display: block;
     min-width: 44px;
     min-height: 44px;
-    margin-right: 30px;
     background-color: transparent;
     border: none;
 }
@@ -61,6 +60,9 @@ body {
 .header__menu button {
     background: transparent;
     border: none;
+    font-size: 18px;
+    padding: 8px;
+    cursor: pointer;
 }
 
 
@@ -69,7 +71,7 @@ body {
  */
 
 .nav {
-    margin-right: 30px;
+    margin-left: 30px;
 }
 
 .nav__list {
@@ -144,39 +146,44 @@ body {
  * main
  */
 
- main {
+main {
     width: 100%;
     margin: 0 auto;
+    flex: 1;
 }
 
 
 /*
  * content
  */
-
+.content {
+    margin: 0 auto;
+    min-height: 100%;
+    padding: 18px;
+}
 
 
 
 /*
- * explore
+ * post-item
  */
 
- .explore {
+ .content__item {
     width: 100%;
     margin: 60px auto;
     text-align: center;
     color: #206A5D;
-    font-weight: 500;
+    font-weight: lighter;
 }
 
-.explore__label {
+.content__heading {
     font-size: 24pt;
     font-weight: lighter;
 }
 
-.explore__label::after {
+.content__heading::after {
     content: '';
-    margin-top: 16px;
+    margin-top: 10px;
     display: block;
     border-bottom: 1.5px solid #ddd;
 }
@@ -189,7 +196,6 @@ body {
  .posts {
     margin: 32px auto auto;
     text-align: left;
-    
 }
 
 
@@ -200,7 +206,7 @@ body {
 .post-item {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
     width: 100%;
-    border-radius: 5px;
+    border-radius: 8px;
     overflow: hidden;
     background-color: #fff;
     color: #000;
@@ -210,35 +216,54 @@ body {
     padding: 16px;
 }
 
+.post-item__header {
+    position: relative;
+}
+
 .post-item__thumbnail {
     width: 100%;
 }
 
-.post-item__city {
+.post-item__rating {
+    position: absolute;
+    padding: 7px 10px;
+    top: 20px;
+    left: 0;
+    display: inline-block;
     font-size: 11pt;
-    border-left: 2px solid #FFCC29;
-    padding-left: 10px;   
-    margin-top: 16px; 
+    color: white;
+    background-color:black
 }
 
-.post-item__rating {
-    font-size: 11pt;
+.post-item__rating__score {
+    margin-left: 10px;
+}
+
+.post-item__city {
+    font-size: 10pt;
+    margin-top: 16px;
+    color: #206A5D;
+}
+
+.post-item__city__name {
+    margin-left: 8px;
+    color: black;
 }
 
 .post-item__title {
     font-weight: 500;
     font-size: 14pt;
-    margin-top: 16px;
+    margin-top: 10px;
     transition: 0.3s opacity;
-    color: #F58634;
+    color: #81b214;
 }
 
 .post-item__title a {
     padding: 10px 0;
 }
 
-.post-item__title:hover {
-    opacity: 0.5;
+.post-item__title a:hover {
+    opacity: 0.6;
 }
 
 .post-item__title a {
@@ -247,7 +272,7 @@ body {
 }
 
 .post-item__description {
-    margin-top: 16px;
+    margin-top: 10px;
     font-size: 12px;
     line-height: 1.5em;
 }
@@ -263,4 +288,10 @@ body {
     width: 100%;
     text-align: center;
     color: #fff;
+}
+
+header {
+    position: sticky;
+    top: 0;
+    z-index: 99;
 }

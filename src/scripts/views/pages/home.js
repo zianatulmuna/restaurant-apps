@@ -5,8 +5,8 @@ const Home = {
     async render() {
       return `
         <div class="content">
-            <div class="explore">
-                <h1 tabindex="0" class="explore__label">Explore Restaurants</h1>
+            <div class="content__item">
+                <h1 tabindex="0" class="content__heading">Explore Restaurants</h1>
                 <div id="posts" class="posts"></div>
             </div>
         </div>
