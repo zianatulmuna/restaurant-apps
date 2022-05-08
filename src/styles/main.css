@@ -213,7 +213,11 @@ main {
 }
 
 .resto-item__header {
-    position: relative;
+    padding: 0 16px;
+    
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-between;
 }
 
 .resto-item__picture {
@@ -221,23 +225,18 @@ main {
 }
 
 .resto-item__rating {
-    position: absolute;
-    top: 20px;
-    left: 0;
-    padding: 8px 12px;
+    margin-right: 5px;
     display: inline-block;
     font-size: 10pt;
-    color: white;
-    background-color:black
 }
 
-.resto-item__rating__score {
-    margin-left: 10px;
+.resto-item__rating__star {
+    color: #fbc606;
+    margin-right: 5px;
 }
 
 .resto-item__city {
     font-size: 10pt;
-    margin-bottom: 10px;
     color: #206A5D;
 }
 
@@ -307,10 +306,6 @@ main {
     width: 400px;
 }
 
-.resto__info__rating {
-    color: #FFC900;
-    margin-right: 5px;
-}
 .resto__info h4 {
     margin: 8px 0;
 }

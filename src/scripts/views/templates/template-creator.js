@@ -2,14 +2,15 @@ import CONFIG from '../../globals/config';
  
 const createRestoItemTemplate = (resto) => `
 <div class="resto-item">
-<div class="resto-item__header">
 <img tabindex="0" class="resto-item__picture" src="${CONFIG.BASE_IMAGE_URL + resto.pictureId}" alt="${resto.name}">
-<div class="resto-item__rating">
-<p tabindex="0">⭐️<span class="resto-item__rating__score">${resto.rating}</span></p>
-</div>
+<div class="resto-item__header">
+    <p tabindex="0" class="resto-item__city"><i class="fas fa-map-marker-alt"></i><span class="resto-item__city__name">${resto.city}</span></p>
+
+    <div class="resto-item__rating">
+    <p tabindex="0"><span class="resto-item__rating__star"><i class="fas fa-star"></i></span>${resto.rating}</p>
+    </div>
 </div>
 <div class="resto-item__content">            
-<p tabindex="0" class="resto-item__city"><i class="fas fa-map-marker-alt"></i><span class="resto-item__city__name">${resto.city}</span></p>
 <h1 class="resto-item__title"><a href="${`/#/detail/${resto.id}`}">${resto.name}</a></h1>
 <p tabindex="0" class="resto-item__description">${resto.description}</p>
 </div>
@@ -28,7 +29,7 @@ const createRestoItemTemplate = (resto) => `
     <h4>City</h4>
     <p>${resto.restaurant.city}</p>
     <h4>Rating</h4>
-    <p><span class="resto__info__rating"><i class="fas fa-star"></i></span>${resto.restaurant.rating}</p>
+    <p><span class="resto-item__rating__star"><i class="fas fa-star"></i></span>${resto.restaurant.rating}</p>
   </div>
   <div class="resto__description">
     <h3>Description</h4>
