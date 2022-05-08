@@ -16,11 +16,11 @@ body, html {
 body {
     padding: 0;
     margin: 0;
-    font-family: 'Plus Jakarta Sans', "Roboto", sans-serif;
-    font-size: 14pt;
+    font-family: 'Poppins', sans-serif;
     font-weight: normal;
     color: #000;
     background-color: #f1f1f1;
+    min-height: 100vh;
 }
 
 
@@ -43,7 +43,7 @@ body {
     box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
 }
 
-.header__title {
+.header__brand {
     height: 40px;
     padding: 3px;
 }
@@ -58,9 +58,6 @@ body {
 }
 
 .header__menu button {
-    background: transparent;
-    border: none;
-    font-size: 18px;
     padding: 8px;
     cursor: pointer;
 }
@@ -90,6 +87,7 @@ body {
 .nav a {
     display: inline-block;
     font-size: 13pt;
+    font-weight: normal;
     padding: 15px;
     min-width: 44px;
     min-height: 44px;
@@ -136,9 +134,6 @@ body {
     margin-top: 16px;
     font-size: 18px;
     font-weight: 300;
-    background-color:rgba(0, 0, 0, 0.5);
-    padding: 10px 20px;
-    border-radius: 40px;
 }
 
 
@@ -165,18 +160,19 @@ main {
 
 
 /*
- * post-item
+ * content-item
  */
 
  .content__item {
     width: 100%;
-    margin: 60px auto;
+    margin-bottom: 50px;
     text-align: center;
     color: #206A5D;
     font-weight: lighter;
 }
 
 .content__heading {
+    margin-top: 50px;
     font-size: 24pt;
     font-weight: lighter;
 }
@@ -190,20 +186,20 @@ main {
 
 
 /*
- * post
+ * restaurants
  */
 
- .posts {
+ .restaurants {
     margin: 32px auto auto;
     text-align: left;
 }
 
 
 /*
- * post item
+ * resto item
  */
 
-.post-item {
+.resto-item {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
     width: 100%;
     border-radius: 8px;
@@ -212,19 +208,19 @@ main {
     color: #000;
 }
 
-.post-item__content {
+.resto-item__content {
     padding: 16px;
 }
 
-.post-item__header {
+.resto-item__header {
     position: relative;
 }
 
-.post-item__thumbnail {
+.resto-item__picture {
     width: 100%;
 }
 
-.post-item__rating {
+.resto-item__rating {
     position: absolute;
     top: 20px;
     left: 0;
@@ -235,22 +231,22 @@ main {
     background-color:black
 }
 
-.post-item__rating__score {
+.resto-item__rating__score {
     margin-left: 10px;
 }
 
-.post-item__city {
+.resto-item__city {
     font-size: 10pt;
     margin-bottom: 10px;
     color: #206A5D;
 }
 
-.post-item__city__name {
+.resto-item__city__name {
     margin-left: 8px;
     color: black;
 }
 
-.post-item__title {
+.resto-item__title {
     font-weight: 500;
     margin-bottom: 10px;
     font-size: 14pt;
@@ -258,31 +254,93 @@ main {
     color: #81b214;
 }
 
-.post-item__title a {
+.resto-item__title a {
     padding: 12px 0;
 }
 
-.post-item__title a:hover {
+.resto-item__title a:hover {
     opacity: 0.6;
 }
 
-.post-item__title a {
+.resto-item__title a {
     text-decoration: none;
     color: inherit;
 }
 
-.post-item__description {
-
+.resto-item__description {
     font-size: 12px;
     line-height: 1.5em;
     overflow: hidden;
     text-overflow: ellipsis;
     display: -webkit-box;
-    -webkit-line-clamp: 5; /* number of lines to show */
+    -webkit-line-clamp: 4; /* number of lines to show */
     -webkit-box-orient: vertical;
 }
 
 
+/*
+ * resto
+ */
+
+ /*
+    Movie
+  */
+   
+  .restaurant {
+    margin: 0 auto;
+    width: 100%;
+    max-width: 800px;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 16px;
+    text-align: left;
+    color: #000;
+  }
+
+ .resto__name {
+    color: #206A5D;
+    margin: 30px 0;
+    font-weight: lighter;
+ }
+ 
+.resto__picture {
+    width: 400px;
+}
+
+.resto__info__rating {
+    color: #FFC900;
+    margin-right: 5px;
+}
+.resto__info h4 {
+    margin: 8px 0;
+}
+
+.restaurant h3 {
+    margin: 8px 0;
+    color: #cc6a23;
+}
+
+.resto__reviews__column {
+    border-radius: 10px;
+    margin-top: 10px;
+    padding: 8px 16px;
+    background-color: white;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1);
+}
+
+.review__name {
+    font-weight: bold;
+}
+
+.review__text {
+    margin: 6px 0;
+}
+
+.review__date {
+    font-style: italic;
+    font-size: 9.5pt;
+    opacity: 0.8;
+}
 /*
  * footer
  */

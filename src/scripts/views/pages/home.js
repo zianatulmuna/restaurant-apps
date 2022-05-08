@@ -7,7 +7,7 @@ const Home = {
         <div class="content">
             <div class="content__item">
                 <h1 tabindex="0" class="content__heading">Explore Restaurants</h1>
-                <div id="posts" class="posts"></div>
+                <div id="restaurants" class="restaurants"></div>
             </div>
         </div>
       `;
@@ -17,7 +17,7 @@ const Home = {
         const restaurants = await RestaurantDicodingSource.listRestaurant();
         
         restaurants.forEach((resto) => {
-            const restoContainer = document.querySelector('#posts');
+            const restoContainer = document.querySelector('#restaurants');
             restoContainer.innerHTML += createRestoItemTemplate(resto);
         });
     },
