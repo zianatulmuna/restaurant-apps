@@ -1,5 +1,5 @@
 import RestaurantDicodingSource from '../../data/restaurant-source';
-import { createRestoItemTemplate } from '../templates/template-creator';
+import { createRestaurantItemTemplate } from '../templates/template-creator';
 
 const Home = {
     async render() {
@@ -18,7 +18,7 @@ const Home = {
         
         restaurants.forEach((resto) => {
             const restoContainer = document.querySelector('#restaurants');
-            restoContainer.innerHTML += createRestoItemTemplate(resto);
+            restoContainer.innerHTML += createRestaurantItemTemplate(resto);
         });
     },
   };

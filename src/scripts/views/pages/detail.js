@@ -1,6 +1,8 @@
 import UrlParser from '../../routes/url-parser';
 import RestaurantDicodingSource from '../../data/restaurant-source';
-import { createRestoDetailTemplate } from '../templates/template-creator';
+import { createRestaurantDetailTemplate } from '../templates/template-creator';
+import LikeButtonInitiator from '../../utils/like-button-initiator';
+import CONFIG from '../../globals/config';
 
 const Detail = {
     async render() {
@@ -14,6 +16,7 @@ const Detail = {
             <div class="content__item">
                 <div id="restaurant" class="restaurant"></div>
             </div>
+            <div id="likeButtonContainer"></div>
         </div>
       `;
     },
@@ -21,8 +24,20 @@ const Detail = {
     async afterRender() {
       const url = UrlParser.parseActiveUrlWithoutCombiner();
       const resto = await RestaurantDicodingSource.detailRestaurant(url.id);
-      const restoContainer = document.querySelector('#restaurant');
-      restoContainer.innerHTML = createRestoDetailTemplate(resto);
+      const restaurantContainer = document.querySelector('#restaurant');
+      restaurantContainer.innerHTML = createRestaurantDetailTemplate(resto);
+
+      LikeButtonInitiator.init({
+        likeButtonContainer: document.querySelector('#likeButtonContainer'),
+        restaurant: {
+          id: resto.restaurant.id,
+          name: resto.restaurant.name, 
+          pictureId: resto.restaurant.pictureId,        
+          city: resto.restaurant.city,
+          rating: resto.restaurant.rating,
+          description: resto.restaurant.description,
+        },
+      });
     },
   };
    
