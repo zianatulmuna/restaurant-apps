@@ -111,7 +111,7 @@ body {
     min-height: 380px;
     width: 100%;
     text-align: center;
-    background-image: url("../public/hero-image_4.jpg");
+    background-image: url("../public/heros/hero-image_4.jpg");
     background-position: center;
     background-color: #30475E;
 }
@@ -371,4 +371,10 @@ main {
     width: 100%;
     text-align: center;
     color: #fff;
+}
+
+.resto-item__not__found {
+    color: #000;
+    font-size: 12pt;
+    width: 100%;
 }
