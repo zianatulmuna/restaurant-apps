@@ -2,7 +2,7 @@ import UrlParser from '../../routes/url-parser';
 import RestaurantDicodingSource from '../../data/restaurant-source';
 import { createRestaurantDetailTemplate } from '../templates/template-creator';
 import LikeButtonPresenter from '../../utils/like-button-presenter';
-import FavoriteRestaurantIdb from '../../src/scripts/data/favorite-restaurant-idb';
+import FavoriteRestaurantIdb from '../../data/favorite-restaurant-idb';
 
 const Detail = {
   async render() {
