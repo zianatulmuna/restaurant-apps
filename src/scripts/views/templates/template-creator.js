@@ -11,7 +11,7 @@ const createRestaurantItemTemplate = (resto) => `
     </div>
 </div>
 <div class="resto-item__content">            
-<h1 class="resto-item__title restaurant__name"><a href="${`/#/detail/${resto.id}`}">${resto.name || '-'}</a></h1>
+<h1 class="resto-item__name restaurant__name"><a href="${`/#/detail/${resto.id}`}">${resto.name || '-'}</a></h1>
 <p tabindex="0" class="resto-item__description">${resto.description || '-'}</p>
 </div>
 </div>

@@ -3,13 +3,18 @@ import { createRestaurantItemTemplate } from '../../templates/template-creator';
 class FavoriteRestaurantSearchView {
   getTemplate() {
     return `
-       <div class="content">
-       <input id="query" type="text">
-       <h2 class="content__heading">Your Liked Restaurant</h2>
-           <div id="restaurants" class="restaurants">
-                      
-           </div>
-       </div>
+      <style>
+        .hero {
+          display: none;
+        }
+        </style>
+      <div class="content">
+        <input id="query" type="text">
+        <div class="content__item">
+          <h1 tabindex="0" class="content__heading">Explore Restaurants</h1>
+          <div id="restaurants" class="restaurants"></div>
+        </div>
+      </div>
    `;
   }
 
@@ -37,7 +42,7 @@ class FavoriteRestaurantSearchView {
   }
 
   _getEmptyRestaurantTemplate() {
-    return '<div class="restaurant-item__not__found restaurants__not__found">Tidak ada film untuk ditampilkan</div>';
+    return '<div class="resto-item__not__found restaurants__not__found">Tidak ada restaurant untuk ditampilkan</div>';
   }
 }
 

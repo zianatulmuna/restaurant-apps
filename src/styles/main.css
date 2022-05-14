@@ -245,7 +245,7 @@ main {
     color: black;
 }
 
-.resto-item__title {
+.resto-item__name {
     font-weight: 500;
     margin-bottom: 10px;
     font-size: 14pt;
@@ -253,17 +253,14 @@ main {
     color: #81b214;
 }
 
-.resto-item__title a {
+.resto-item__name a {
     padding: 12px 0;
-}
-
-.resto-item__title a:hover {
-    opacity: 0.6;
-}
-
-.resto-item__title a {
     text-decoration: none;
     color: inherit;
+}
+
+.resto-item__name a:hover {
+    opacity: 0.6;
 }
 
 .resto-item__description {

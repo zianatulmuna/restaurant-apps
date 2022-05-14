@@ -1,10 +1,14 @@
 {
     "env": {
         "browser": true,
-        "es2021": true
+        "es2021": true,
+        "node": true,
+        "jasmine": true,
+        "codeceptjs/codeceptjs": true
     },
     "extends": [
-        "airbnb-base"
+        "airbnb-base",
+        "plugin:codeceptjs/recommended"
     ],
     "parserOptions": {
         "ecmaVersion": "latest",
@@ -22,7 +26,5 @@
         "import/prefer-default-export": 0,
         "eqeqeq": 0,
         "no-new": 0
-
-
     }
 }
