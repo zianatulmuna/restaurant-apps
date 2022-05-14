@@ -9,7 +9,6 @@ class FavoriteRestaurantSearchView {
         }
         </style>
       <div class="content">
-        <input id="query" type="text">
         <div class="content__item">
           <h1 tabindex="0" class="content__heading">Explore Restaurants</h1>
           <div id="restaurants" class="restaurants"></div>
