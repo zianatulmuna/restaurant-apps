@@ -2,7 +2,7 @@ import CONFIG from '../../globals/config';
 
 const createRestaurantItemTemplate = (resto) => `
 <div class="resto-item">
-<img tabindex="0" class="resto-item__picture" src="${CONFIG.BASE_IMAGE_URL + resto.pictureId}" alt="${resto.name || '-'}">
+<img tabindex="0" class="resto-item__picture lazyload" data-src="${CONFIG.BASE_IMAGE_URL + resto.pictureId}" alt="${resto.name || '-'}">
 <div class="resto-item__header">
     <p tabindex="0" class="resto-item__city"><i class="fas fa-map-marker-alt" aria-label="lokasi"></i><span class="resto-item__city__name">${resto.city || '-'}</span></p>
 
@@ -19,7 +19,7 @@ const createRestaurantItemTemplate = (resto) => `
 
 const createRestaurantDetailTemplate = (resto) => `
   <h1 tabindex="0" class="resto__name">${resto.restaurant.name}</h1>
-  <img tabindex="0" class="resto__picture" src="${CONFIG.BASE_IMAGE_URL + resto.restaurant.pictureId}" alt="${resto.restaurant.name}">
+  <img tabindex="0" class="resto__picture lazyload" data-src="${CONFIG.BASE_IMAGE_URL + resto.restaurant.pictureId}" alt="${resto.restaurant.name}">
   <div class="resto__info">
     <h3 tabindex="0">Information</h3>
     <h4 tabindex="0">Address</h4>

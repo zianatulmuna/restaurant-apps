@@ -71,9 +71,14 @@
     .content__heading {
         font-size: 20pt;
     }
+
+
 }
 
 @media screen and (min-width: 650px) {
+    .hero {
+        background-image: url("../public/images/hero-image_4-large.jpg");
+    }
     .restaurants {
         display: grid;
         grid-template-columns: 1fr 1fr;
